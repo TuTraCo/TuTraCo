@@ -234,7 +234,7 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-    .table-data td, .table-data th {
+    .table-data {
         white-space: nowrap;
     }
 }
