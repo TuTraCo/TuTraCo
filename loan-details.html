@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        #no-loan-message {
+            text-align: center;
+            font-size: 24px;
+            color: #ff0000;
+            margin-top: 20px;
+        }
+        #home-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #home-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            table, th, td {
+                font-size: 14px;
+            }
+            #home-btn {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img class="org-logo" src="Logo/ttc-logo.jpeg" alt="TTC Official Logo">
+        </div>
+        <div class="org-header">
+            <p class="org-name">Tumauini Transport Cooperative</p>
+            <p class="org-reg">Registration No.: 9520-10200000000-45868</p>
+            <p class="org-address">Maharlika Highway, Maligaya, Tumauini, Isabela</p>
+        </div>
+    </header>
+    <div id="loan-details">
+        <h1>Loan Details</h1>
+        <table id="loan-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="no-loan-message" style="display: none;">NO ACTIVE LOAN</div>
+        <button id="home-btn">Home</button>
+        <script src="loan-details.js"></script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</body>
+</html>
