@@ -42,7 +42,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 let row = document.createElement('tr');
 
                 let noCell = document.createElement('td');
-                noCell.textContent = index + 1; // Serial number
+                if (index === 0) {
+                    noCell.textContent = ""; // Serial number
+                } else {
+                    noCell.textContent = index; // Serial number    
+                }
                 row.appendChild(noCell);
 
                 let dueDateCell = document.createElement('td');
