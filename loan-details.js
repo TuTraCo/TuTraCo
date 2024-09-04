@@ -50,23 +50,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 row.appendChild(noCell);
 
                 let dueDateCell = document.createElement('td');
-                dueDateCell.textContent = loan['Due Date'] || '';
+                dueDateCell.textContent = loan['Payment Date'] || '';
                 row.appendChild(dueDateCell);
 
                 let paymentDueCell = document.createElement('td');
-                let paymentDue = loan['Payment Due'] ? formatter.format(parseFloat(loan['Payment Due'])) : '';
+                let paymentDue = loan['Repayment'] ? formatter.format(parseFloat(loan['Repayment'])) : '';
                 paymentDueCell.textContent = paymentDue;
                 row.appendChild(paymentDueCell);
-
-                let interestCell = document.createElement('td');
-                let interest = loan['Interest'] ? formatter.format(parseFloat(loan['Interest'])) : '';
-                interestCell.textContent = interest;
-                row.appendChild(interestCell);
-
-                let principalCell = document.createElement('td');
-                let principal = loan['Principal'] ? formatter.format(parseFloat(loan['Principal'])) : '';
-                principalCell.textContent = principal;
-                row.appendChild(principalCell);
 
                 let balanceCell = document.createElement('td');
                 let balance = loan['Balance'] ? formatter.format(parseFloat(loan['Balance'])) : '';
