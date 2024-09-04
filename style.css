@@ -172,11 +172,6 @@ button {
     margin-bottom: auto;
 }
 
-#loan-table {
-    width: 100%;
-    overflow-x: auto;
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .button-group {
@@ -231,14 +226,4 @@ button {
     }
 
 
-}
-
-@media (max-width: 768px) {
-    .table-data {
-        white-space: nowrap;
-    }
-
-    #loan-table {
-    font-size: 5px;
-    }
 }
